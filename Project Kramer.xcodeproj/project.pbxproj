@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		905433B018E1B6E000BE0139 /* AddNewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905433AE18E1B6E000BE0139 /* AddNewItemViewController.m */; };
+		905433B118E1B6E000BE0139 /* AddNewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905433AF18E1B6E000BE0139 /* AddNewItemViewController.xib */; };
+		905433B818E1B8DE00BE0139 /* ItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905433B618E1B8DE00BE0139 /* ItemsTableViewController.m */; };
+		905433B918E1B8DE00BE0139 /* ItemsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905433B718E1B8DE00BE0139 /* ItemsTableViewController.xib */; };
+		905FB26418E1B0A20060B947 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 905FB26318E1B0A20060B947 /* Item.m */; };
+		905FB26618E1B1100060B947 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905FB26518E1B1100060B947 /* main.storyboard */; };
 		9081C4FB18D552D500399E38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9081C4FA18D552D500399E38 /* Foundation.framework */; };
 		9081C4FD18D552D500399E38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9081C4FC18D552D500399E38 /* CoreGraphics.framework */; };
 		9081C4FF18D552D500399E38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9081C4FE18D552D500399E38 /* UIKit.framework */; };
@@ -35,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		905433AD18E1B6E000BE0139 /* AddNewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewItemViewController.h; sourceTree = "<group>"; };
+		905433AE18E1B6E000BE0139 /* AddNewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewItemViewController.m; sourceTree = "<group>"; };
+		905433AF18E1B6E000BE0139 /* AddNewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewItemViewController.xib; sourceTree = "<group>"; };
+		905433B518E1B8DE00BE0139 /* ItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewController.h; sourceTree = "<group>"; };
+		905433B618E1B8DE00BE0139 /* ItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewController.m; sourceTree = "<group>"; };
+		905433B718E1B8DE00BE0139 /* ItemsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsTableViewController.xib; sourceTree = "<group>"; };
+		905FB26218E1B0A20060B947 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		905FB26318E1B0A20060B947 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		905FB26518E1B1100060B947 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		9081C4F718D552D500399E38 /* Project Kramer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Kramer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9081C4FA18D552D500399E38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9081C4FC18D552D500399E38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +135,15 @@
 				9081C51118D552D500399E38 /* Images.xcassets */,
 				9081C50E18D552D500399E38 /* Project_Kramer.xcdatamodeld */,
 				9081C50318D552D500399E38 /* Supporting Files */,
+				905FB26218E1B0A20060B947 /* Item.h */,
+				905FB26318E1B0A20060B947 /* Item.m */,
+				905FB26518E1B1100060B947 /* main.storyboard */,
+				905433AD18E1B6E000BE0139 /* AddNewItemViewController.h */,
+				905433AE18E1B6E000BE0139 /* AddNewItemViewController.m */,
+				905433AF18E1B6E000BE0139 /* AddNewItemViewController.xib */,
+				905433B518E1B8DE00BE0139 /* ItemsTableViewController.h */,
+				905433B618E1B8DE00BE0139 /* ItemsTableViewController.m */,
+				905433B718E1B8DE00BE0139 /* ItemsTableViewController.xib */,
 			);
 			path = "Project Kramer";
 			sourceTree = "<group>";
@@ -229,6 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9081C50718D552D500399E38 /* InfoPlist.strings in Resources */,
+				905FB26618E1B1100060B947 /* main.storyboard in Resources */,
+				905433B918E1B8DE00BE0139 /* ItemsTableViewController.xib in Resources */,
+				905433B118E1B6E000BE0139 /* AddNewItemViewController.xib in Resources */,
 				9081C51218D552D500399E38 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905433B818E1B8DE00BE0139 /* ItemsTableViewController.m in Sources */,
+				905FB26418E1B0A20060B947 /* Item.m in Sources */,
 				9081C51018D552D500399E38 /* Project_Kramer.xcdatamodeld in Sources */,
 				9081C50D18D552D500399E38 /* AppDelegate.m in Sources */,
+				905433B018E1B6E000BE0139 /* AddNewItemViewController.m in Sources */,
 				9081C50918D552D500399E38 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +479,7 @@
 				9081C52B18D552D600399E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9081C52C18D552D600399E38 /* Build configuration list for PBXNativeTarget "Project KramerTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +488,7 @@
 				9081C52E18D552D600399E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
