@@ -28,6 +28,13 @@
 		9081C51C18D552D600399E38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9081C50018D552D500399E38 /* CoreData.framework */; };
 		9081C52418D552D600399E38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9081C52218D552D600399E38 /* InfoPlist.strings */; };
 		9081C52618D552D600399E38 /* Project_KramerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9081C52518D552D600399E38 /* Project_KramerTests.m */; };
+		90BFB51318E5B99900AC43B4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB51218E5B99900AC43B4 /* User.m */; };
+		90BFB51718E5BC4C00AC43B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB51518E5BC4C00AC43B4 /* LoginViewController.m */; };
+		90BFB51818E5BC4C00AC43B4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BFB51618E5BC4C00AC43B4 /* LoginViewController.xib */; };
+		90BFB51C18E6B1EE00AC43B4 /* NewUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB51A18E6B1EE00AC43B4 /* NewUserViewController.m */; };
+		90BFB51D18E6B1EE00AC43B4 /* NewUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BFB51B18E6B1EE00AC43B4 /* NewUserViewController.xib */; };
+		90BFB52118E6B38900AC43B4 /* HomeTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB51F18E6B38900AC43B4 /* HomeTabBarController.m */; };
+		90BFB52218E6B38900AC43B4 /* HomeTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90BFB52018E6B38900AC43B4 /* HomeTabBarController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +75,17 @@
 		9081C52118D552D600399E38 /* Project KramerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Project KramerTests-Info.plist"; sourceTree = "<group>"; };
 		9081C52318D552D600399E38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9081C52518D552D600399E38 /* Project_KramerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project_KramerTests.m; sourceTree = "<group>"; };
+		90BFB51118E5B99900AC43B4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		90BFB51218E5B99900AC43B4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		90BFB51418E5BC4C00AC43B4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		90BFB51518E5BC4C00AC43B4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		90BFB51618E5BC4C00AC43B4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		90BFB51918E6B1EE00AC43B4 /* NewUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewUserViewController.h; sourceTree = "<group>"; };
+		90BFB51A18E6B1EE00AC43B4 /* NewUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUserViewController.m; sourceTree = "<group>"; };
+		90BFB51B18E6B1EE00AC43B4 /* NewUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewUserViewController.xib; sourceTree = "<group>"; };
+		90BFB51E18E6B38900AC43B4 /* HomeTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTabBarController.h; sourceTree = "<group>"; };
+		90BFB51F18E6B38900AC43B4 /* HomeTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTabBarController.m; sourceTree = "<group>"; };
+		90BFB52018E6B38900AC43B4 /* HomeTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTabBarController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +148,11 @@
 		9081C50218D552D500399E38 /* Project Kramer */ = {
 			isa = PBXGroup;
 			children = (
+				90BFB51918E6B1EE00AC43B4 /* NewUserViewController.h */,
+				90BFB51A18E6B1EE00AC43B4 /* NewUserViewController.m */,
+				90BFB51B18E6B1EE00AC43B4 /* NewUserViewController.xib */,
+				90BFB51118E5B99900AC43B4 /* User.h */,
+				90BFB51218E5B99900AC43B4 /* User.m */,
 				9081C50B18D552D500399E38 /* AppDelegate.h */,
 				9081C50C18D552D500399E38 /* AppDelegate.m */,
 				9081C51118D552D500399E38 /* Images.xcassets */,
@@ -138,6 +161,12 @@
 				905FB26218E1B0A20060B947 /* Item.h */,
 				905FB26318E1B0A20060B947 /* Item.m */,
 				905FB26518E1B1100060B947 /* main.storyboard */,
+				90BFB51E18E6B38900AC43B4 /* HomeTabBarController.h */,
+				90BFB51F18E6B38900AC43B4 /* HomeTabBarController.m */,
+				90BFB52018E6B38900AC43B4 /* HomeTabBarController.xib */,
+				90BFB51418E5BC4C00AC43B4 /* LoginViewController.h */,
+				90BFB51518E5BC4C00AC43B4 /* LoginViewController.m */,
+				90BFB51618E5BC4C00AC43B4 /* LoginViewController.xib */,
 				905433AD18E1B6E000BE0139 /* AddNewItemViewController.h */,
 				905433AE18E1B6E000BE0139 /* AddNewItemViewController.m */,
 				905433AF18E1B6E000BE0139 /* AddNewItemViewController.xib */,
@@ -253,9 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9081C50718D552D500399E38 /* InfoPlist.strings in Resources */,
+				90BFB51D18E6B1EE00AC43B4 /* NewUserViewController.xib in Resources */,
+				90BFB52218E6B38900AC43B4 /* HomeTabBarController.xib in Resources */,
 				905FB26618E1B1100060B947 /* main.storyboard in Resources */,
 				905433B918E1B8DE00BE0139 /* ItemsTableViewController.xib in Resources */,
 				905433B118E1B6E000BE0139 /* AddNewItemViewController.xib in Resources */,
+				90BFB51818E5BC4C00AC43B4 /* LoginViewController.xib in Resources */,
 				9081C51218D552D500399E38 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,10 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BFB51318E5B99900AC43B4 /* User.m in Sources */,
 				905433B818E1B8DE00BE0139 /* ItemsTableViewController.m in Sources */,
 				905FB26418E1B0A20060B947 /* Item.m in Sources */,
 				9081C51018D552D500399E38 /* Project_Kramer.xcdatamodeld in Sources */,
+				90BFB51C18E6B1EE00AC43B4 /* NewUserViewController.m in Sources */,
 				9081C50D18D552D500399E38 /* AppDelegate.m in Sources */,
+				90BFB52118E6B38900AC43B4 /* HomeTabBarController.m in Sources */,
+				90BFB51718E5BC4C00AC43B4 /* LoginViewController.m in Sources */,
 				905433B018E1B6E000BE0139 /* AddNewItemViewController.m in Sources */,
 				9081C50918D552D500399E38 /* main.m in Sources */,
 			);
