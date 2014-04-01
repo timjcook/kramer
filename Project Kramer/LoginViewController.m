@@ -38,12 +38,29 @@
   if(self.user) {
     [self performSegueWithIdentifier:@"userHasLoggedIn" sender:self];
   }
+  
+  NSString *url = @"http://0.0.0.0:3000/test";
+  NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+  
+  NSURLResponse *resp = nil;
+  NSError *err = nil;
+  NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &err];
+  NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
+  
+  if (!jsonArray) {
+    NSLog(@"Error parsing JSON: %@", err);
+  } else {
+    for(NSDictionary *item in jsonArray) {
+      NSLog(@" %@", item);
+      NSLog(@"---------------------------------");
+    }
+  }
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
