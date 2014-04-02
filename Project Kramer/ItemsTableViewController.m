@@ -8,6 +8,7 @@
 
 #import "Item.h"
 #import "ItemsTableViewController.h"
+#import "HomeTabBarController.h"
 #import "AddNewItemViewController.h"
 
 @interface ItemsTableViewController ()
@@ -23,6 +24,11 @@
   [super viewDidLoad];
   self.items = [[NSMutableArray alloc] init];
   [self loadInitialData];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+  HomeTabBarController *tab_bar = self.tabBarController;
+  self.title = tab_bar.user.firstName;
 }
 
 - (void)loadInitialData {

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Items Table View Controller - Your Items-->
+        <!--Items Table View Controller-->
         <scene sceneID="qtQ-LI-ZPp">
             <objects>
                 <tableViewController id="Zsx-bM-PZa" customClass="ItemsTableViewController" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                             <outlet property="delegate" destination="Zsx-bM-PZa" id="3ZN-71-r54"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Items" id="XZa-7q-XOh">
+                    <navigationItem key="navigationItem" id="XZa-7q-XOh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5vr-GN-hwo">
                             <connections>
                                 <segue destination="RYT-QN-LwM" kind="modal" id="esR-fx-qvS"/>
