@@ -27,8 +27,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-  HomeTabBarController *tab_bar = self.tabBarController;
-  self.title = tab_bar.user.firstName;
+
 }
 
 - (void)loadInitialData {

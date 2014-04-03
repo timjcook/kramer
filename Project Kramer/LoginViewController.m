@@ -38,54 +38,35 @@
   if(self.user) {
   
     NSString *url = @"http://0.0.0.0:3000/user/new";
-
-    NSMutableDictionary *json = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *user_data = [[NSMutableDictionary alloc] init];
-    [user_data setObject:self.user.firstName forKey:@"first_name"];
-    [user_data setObject:self.user.lastName forKey:@"last_name"];
-    [user_data setObject:@"test@example.com" forKey:@"email"];
-    [json setObject:user_data forKey:@"user"];
+    NSDictionary *json = @{@"user": @{@"first_name": self.user.firstName, @"last_name": self.user.lastName, @"email": @"test@example.com"}
+    };
     
-//    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:&error];
-    NSString *postLength = [NSString stringWithFormat:@"%d",[jsonData length]];
-//    NSString *post = [NSString stringWithFormat:@"first_name=%@&last_name=%@&email=test@example.com", self.user.firstName, self.user.lastName];
-    NSString *post = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    // it all starts with a manager
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    // in my case, I'm in prototype mode, I own the network being used currently,
+    // so I can use a self generated cert key, and the following line allows me to use that
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    // Make sure we a JSON serialization policy, not sure what the default is
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:url]]];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
-    [request setHTTPBody:jsonData];
+    // Now we can just PUT it to our target URL (note the https).
+    // This will return immediately, when the transaction has finished,
+    // one of either the success or failure blocks will fire
+    [manager
+     POST: url
+     parameters: json
+     success:^(AFHTTPRequestOperation *operation, id responseObject){
+       NSLog(@"Submit response data: %@", responseObject);} // success callback block
+     failure:^(AFHTTPRequestOperation *operation, NSError *error){
+       NSLog(@"Error: %@", error);} // failure callback block
+     ];
 
-//    NSMutableURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-  
-    NSURLResponse *resp = nil;
-    NSError *err = nil;
-    NSData *response = [NSURLConnection sendSynchronousRequest: request returningResponse: &resp error: &err];
-    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: response options: NSJSONReadingMutableContainers error: &err];
-  
-    if (!jsonArray) {
-      NSLog(@"Error parsing JSON: %@", err);
-    } else {
-      for(NSDictionary *item in jsonArray) {
-        NSLog(@" %@", item);
-        NSLog(@"---------------------------------");
-      }
-    }
     
     [self performSegueWithIdentifier:@"userHasLoggedIn" sender:self];
   }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if([segue.identifier isEqualToString:@"userHasLoggedIn"]) {
-    HomeTabBarController *destination = segue.destinationViewController;
-    
-    destination.user = self.user;
-  }
 }
 
 

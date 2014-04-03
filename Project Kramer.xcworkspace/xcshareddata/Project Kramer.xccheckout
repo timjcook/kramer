@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9093C8FE-73D5-45B1-98A4-41C3A5F2CF38</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Project Kramer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>064BA7A3-878D-409E-AB3F-39BD25328268</key>
+		<string>https://github.com/timjcook/kramer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Project Kramer.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>064BA7A3-878D-409E-AB3F-39BD25328268</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/timjcook/kramer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>064BA7A3-878D-409E-AB3F-39BD25328268</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>064BA7A3-878D-409E-AB3F-39BD25328268</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Project Kramer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
