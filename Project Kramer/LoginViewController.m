@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "NewUserViewController.h"
 #import "HomeTabBarController.h"
+#import "UserSaveService.h"
 
 @interface LoginViewController ()
 
@@ -36,32 +37,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   if(self.user) {
-  
-    NSString *url = @"http://0.0.0.0:3000/user/new";
-    NSDictionary *json = @{@"user": @{@"first_name": self.user.firstName, @"last_name": self.user.lastName, @"email": @"test@example.com"}
-    };
-    
-    // it all starts with a manager
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    // in my case, I'm in prototype mode, I own the network being used currently,
-    // so I can use a self generated cert key, and the following line allows me to use that
-    manager.securityPolicy.allowInvalidCertificates = YES;
-    // Make sure we a JSON serialization policy, not sure what the default is
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    // Now we can just PUT it to our target URL (note the https).
-    // This will return immediately, when the transaction has finished,
-    // one of either the success or failure blocks will fire
-    [manager
-     POST: url
-     parameters: json
-     success:^(AFHTTPRequestOperation *operation, id responseObject){
-       NSLog(@"Submit response data: %@", responseObject);} // success callback block
-     failure:^(AFHTTPRequestOperation *operation, NSError *error){
-       NSLog(@"Error: %@", error);} // failure callback block
-     ];
-
-    
+    UserSaveService *save_service = [[UserSaveService alloc] init];
+    [save_service setUser:self.user];
+    [save_service save];
     [self performSegueWithIdentifier:@"userHasLoggedIn" sender:self];
   }
 }

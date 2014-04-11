@@ -10,10 +10,9 @@
 #import "ItemsTableViewController.h"
 #import "HomeTabBarController.h"
 #import "AddNewItemViewController.h"
+#import "ItemAPIService.h"
 
 @interface ItemsTableViewController ()
-
-@property NSMutableArray *items;
 
 @end
 
@@ -31,15 +30,9 @@
 }
 
 - (void)loadInitialData {
-  Item *item1 = [[Item alloc] init];
-  item1.name = @"GoPro";
-  [self.items addObject:item1];
-  Item *item2 = [[Item alloc] init];
-  item2.name = @"Surfboard";
-  [self.items addObject:item2];
-  Item *item3 = [[Item alloc] init];
-  item3.name = @"Engineering Systems Design Textbook";
-  [self.items addObject:item3];
+  ItemAPIService *api_service = [[ItemAPIService alloc] init];
+  
+  [api_service getItems:self];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {

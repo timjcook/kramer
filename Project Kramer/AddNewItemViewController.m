@@ -7,6 +7,7 @@
 //
 
 #import "AddNewItemViewController.h"
+#import "ItemAPIService.h"
 
 @interface AddNewItemViewController ()
 
@@ -39,6 +40,10 @@
   if(self.itemNameTextField.text.length > 0) {
     self.item = [[Item alloc] init];
     self.item.name = self.itemNameTextField.text;
+    
+    ItemAPIService *save_service = [[ItemAPIService alloc] init];
+    [save_service setItem:self.item];
+    [save_service save];
   }
 }
 

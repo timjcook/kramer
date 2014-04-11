@@ -12,5 +12,6 @@
 @interface ItemsTableViewController : UITableViewController
 
 -(IBAction)unwindToList:(UIStoryboardSegue *)segue;
+@property NSMutableArray *items;
 
 @end
