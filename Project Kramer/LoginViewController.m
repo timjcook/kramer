@@ -39,9 +39,12 @@
   if(self.user) {
     UserSaveService *save_service = [[UserSaveService alloc] init];
     [save_service setUser:self.user];
-    [save_service save];
-    [self performSegueWithIdentifier:@"userHasLoggedIn" sender:self];
+    [save_service save:self];
   }
+}
+
+- (void)logIn {
+  [self performSegueWithIdentifier:@"userHasLoggedIn" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

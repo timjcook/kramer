@@ -13,6 +13,7 @@
 
 @property User *user;
 
+- (void)logIn;
 -(IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
 @end

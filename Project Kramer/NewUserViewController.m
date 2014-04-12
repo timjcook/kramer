@@ -45,6 +45,7 @@
     User *user = [[User alloc] init];
     user.firstName = self.firstNameTextField.text;
     user.lastName = self.lastNameTextField.text;
+    
     self.user = user;
   }
 }

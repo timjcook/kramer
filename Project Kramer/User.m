@@ -10,4 +10,13 @@
 
 @implementation User
 
+-(NSMutableString *)name {
+  NSLog(@"%@ %@", self.firstName, self.lastName);
+  NSMutableString *name = [self.firstName mutableCopy];
+  [name appendString:@" "];
+  [name appendString:self.lastName];
+  
+  return name;
+}
+
 @end

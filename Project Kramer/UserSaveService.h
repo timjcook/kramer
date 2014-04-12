@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "LoginViewController.h"
 
 @interface UserSaveService : NSObject
 
--(void)save;
+-(void)save:(LoginViewController *)delegate;
 @property User *user;
 
 @end

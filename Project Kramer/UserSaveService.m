@@ -10,7 +10,7 @@
 
 @implementation UserSaveService
 
--(void)save {
+-(void)save:(LoginViewController *)delegate {
   NSString *url = @"http://0.0.0.0:3000/user/new";
   NSDictionary *json = @{
     @"user":@{
@@ -32,11 +32,13 @@
   // This will return immediately, when the transaction has finished,
   // one of either the success or failure blocks will fire
 
-  AFHTTPRequestOperation *operation = [manager
+  [manager
    POST: url
    parameters: json
    success:^(AFHTTPRequestOperation *operation, id responseObject){
-     NSLog(@"Submit response data: %@", responseObject);} // success callback block
+     NSLog(@"Submit response data: %@", responseObject);
+     [delegate logIn];
+   } // success callback block
    failure:^(AFHTTPRequestOperation *operation, NSError *error){
      NSLog(@"Error: %@", error);} // failure callback block
    ];
