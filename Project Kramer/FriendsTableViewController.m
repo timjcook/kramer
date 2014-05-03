@@ -7,8 +7,8 @@
 //
 
 #import "FriendsTableViewController.h"
-#import "User.h"
 #import "FriendAPIService.h"
+#import "HomeTabBarController.h"
 
 @interface FriendsTableViewController ()
 
@@ -29,11 +29,14 @@
 {
   [super viewDidLoad];
   [self loadInitialData];
+  
+  HomeTabBarController *tab_bar = (HomeTabBarController *)self.tabBarController;
+  self.user = tab_bar.user;
 }
 
 - (void)loadInitialData {
   FriendAPIService *api_service = [[FriendAPIService alloc] init];
-  [api_service getFriends:self];
+  [api_service get_users:self];
 }
 
 
@@ -62,14 +65,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
+
+  User *user = [self.users objectAtIndex:indexPath.row];
   static NSString *CellIdentifier = @"FriendsListCellIdentifier";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-  User *user = [self.users objectAtIndex:indexPath.row];
+  
   cell.textLabel.text = user.name;
   
   return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  [tableView deselectRowAtIndexPath:indexPath animated:NO];
+  
+  User *selected_user = [self.users objectAtIndex:indexPath.row];
+  
+  FriendAPIService *api_service = [[FriendAPIService alloc] init];
+  [api_service add_friend:self sending_user:self.user receiving_user:selected_user];
+  
+  static NSString *CellIdentifier = @"FriendsListCellIdentifier";
+  UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+
+  selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
 /*

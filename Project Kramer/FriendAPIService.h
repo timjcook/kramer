@@ -14,7 +14,7 @@
 
 @property User *sending_user;
 @property User *receiving_user;
--(void)save:(FriendsTableViewController *)delegate;
--(void)getFriends:(FriendsTableViewController *)delegate;
+-(void)add_friend:(FriendsTableViewController *)delegate sending_user:(User *)sending_user receiving_user:(User *)receiving_user;
+-(void)get_users:(FriendsTableViewController *)delegate;
 
 @end

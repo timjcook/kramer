@@ -10,13 +10,14 @@
 
 @implementation FriendAPIService
 
--(void)add_friend:(FriendsTableViewController *)delegate {
+-(void)add_friend:(FriendsTableViewController *)delegate sending_user:(User *)sending_user receiving_user:(User *)receiving_user {
+
   
   NSString *url = @"http://0.0.0.0:3000/friend/add";
   NSDictionary *json = @{
                          @"friend":@{
-                             @"sending_user": self.sending_user.name,
-                             @"receiving_user": self.receiving_user.name,
+                             @"sending_user": [NSString stringWithFormat: @"%d", sending_user.id],
+                             @"accepting_user": [NSString stringWithFormat: @"%d", receiving_user.id],
                              }
                          };
   
@@ -44,7 +45,7 @@
   
 }
 
--(void)getFriends:(FriendsTableViewController *)delegate {
+-(void)get_users:(FriendsTableViewController *)delegate {
     NSURL *url = [NSURL URLWithString:@"http://0.0.0.0:3000/user/all"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -59,15 +60,15 @@
       
       for(id entry in responseObject) {
         User *user = [[User alloc] init];
+        NSLog(@"entry: %@", entry);
         
-        NSString *first_name = [entry objectForKey:@"first_name"];
-        NSString *last_name = [entry objectForKey:@"last_name"];
+        NSInteger *id = [[entry objectForKey:@"id"] intValue];
         
-        if(first_name != [NSNull null] && last_name != [NSNull null]) {
-          user.firstName = [entry objectForKey:@"first_name"];
-          user.lastName = [entry objectForKey:@"last_name"];
-          [users addObject:user];
-        }
+        user.id = id;
+        user.firstName = [entry objectForKey:@"first_name"];
+        user.lastName = [entry objectForKey:@"last_name"];
+        NSLog(@"user: %@", user.name);
+        [users addObject:user];
       }
       
       delegate.users = users;

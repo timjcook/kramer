@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface FriendsTableViewController : UITableViewController
 
+@property User *user;
 @property NSMutableArray *users;
 
 @end

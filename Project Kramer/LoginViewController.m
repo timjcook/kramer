@@ -48,6 +48,10 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if([segue.destinationViewController isKindOfClass:[HomeTabBarController class]]) {
+    HomeTabBarController *dest = segue.destinationViewController;
+    dest.user = self.user;
+  }
 }
 
 

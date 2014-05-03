@@ -166,39 +166,15 @@
 		9081C50218D552D500399E38 /* Project Kramer */ = {
 			isa = PBXGroup;
 			children = (
-				90BFB51918E6B1EE00AC43B4 /* NewUserViewController.h */,
-				90BFB51A18E6B1EE00AC43B4 /* NewUserViewController.m */,
-				90BFB51B18E6B1EE00AC43B4 /* NewUserViewController.xib */,
-				90BFB51118E5B99900AC43B4 /* User.h */,
-				90BFB51218E5B99900AC43B4 /* User.m */,
-				90D38C5318F82EFD0000B52B /* UserSaveService.h */,
-				90D38C5418F82EFE0000B52B /* UserSaveService.m */,
-				90D38C5618F835C40000B52B /* ItemAPIService.h */,
-				90D38C5718F835C40000B52B /* ItemAPIService.m */,
+				90AEB64A1914A674003DA9EA /* Controllers */,
+				90AEB6491914A662003DA9EA /* Models */,
+				90AEB6451914A176003DA9EA /* Helpers */,
 				9081C50B18D552D500399E38 /* AppDelegate.h */,
 				9081C50C18D552D500399E38 /* AppDelegate.m */,
 				9081C51118D552D500399E38 /* Images.xcassets */,
 				9081C50E18D552D500399E38 /* Project_Kramer.xcdatamodeld */,
 				9081C50318D552D500399E38 /* Supporting Files */,
-				905FB26218E1B0A20060B947 /* Item.h */,
-				905FB26318E1B0A20060B947 /* Item.m */,
 				905FB26518E1B1100060B947 /* main.storyboard */,
-				904BE8CE18F910FA00468981 /* FriendsTableViewController.h */,
-				904BE8CF18F910FA00468981 /* FriendsTableViewController.m */,
-				904BE8D118F9151800468981 /* FriendAPIService.h */,
-				904BE8D218F9151800468981 /* FriendAPIService.m */,
-				90BFB51E18E6B38900AC43B4 /* HomeTabBarController.h */,
-				90BFB51F18E6B38900AC43B4 /* HomeTabBarController.m */,
-				90BFB52018E6B38900AC43B4 /* HomeTabBarController.xib */,
-				90BFB51418E5BC4C00AC43B4 /* LoginViewController.h */,
-				90BFB51518E5BC4C00AC43B4 /* LoginViewController.m */,
-				90BFB51618E5BC4C00AC43B4 /* LoginViewController.xib */,
-				905433AD18E1B6E000BE0139 /* AddNewItemViewController.h */,
-				905433AE18E1B6E000BE0139 /* AddNewItemViewController.m */,
-				905433AF18E1B6E000BE0139 /* AddNewItemViewController.xib */,
-				905433B518E1B8DE00BE0139 /* ItemsTableViewController.h */,
-				905433B618E1B8DE00BE0139 /* ItemsTableViewController.m */,
-				905433B718E1B8DE00BE0139 /* ItemsTableViewController.xib */,
 			);
 			path = "Project Kramer";
 			sourceTree = "<group>";
@@ -230,6 +206,54 @@
 				9081C52218D552D600399E38 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90AEB6451914A176003DA9EA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				904BE8D118F9151800468981 /* FriendAPIService.h */,
+				904BE8D218F9151800468981 /* FriendAPIService.m */,
+				90D38C5318F82EFD0000B52B /* UserSaveService.h */,
+				90D38C5418F82EFE0000B52B /* UserSaveService.m */,
+				90D38C5618F835C40000B52B /* ItemAPIService.h */,
+				90D38C5718F835C40000B52B /* ItemAPIService.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		90AEB6491914A662003DA9EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				905FB26218E1B0A20060B947 /* Item.h */,
+				905FB26318E1B0A20060B947 /* Item.m */,
+				90BFB51118E5B99900AC43B4 /* User.h */,
+				90BFB51218E5B99900AC43B4 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		90AEB64A1914A674003DA9EA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				904BE8CE18F910FA00468981 /* FriendsTableViewController.h */,
+				90BFB51E18E6B38900AC43B4 /* HomeTabBarController.h */,
+				90BFB51F18E6B38900AC43B4 /* HomeTabBarController.m */,
+				90BFB52018E6B38900AC43B4 /* HomeTabBarController.xib */,
+				90BFB51418E5BC4C00AC43B4 /* LoginViewController.h */,
+				90BFB51518E5BC4C00AC43B4 /* LoginViewController.m */,
+				90BFB51618E5BC4C00AC43B4 /* LoginViewController.xib */,
+				905433AD18E1B6E000BE0139 /* AddNewItemViewController.h */,
+				905433AE18E1B6E000BE0139 /* AddNewItemViewController.m */,
+				905433AF18E1B6E000BE0139 /* AddNewItemViewController.xib */,
+				905433B518E1B8DE00BE0139 /* ItemsTableViewController.h */,
+				905433B618E1B8DE00BE0139 /* ItemsTableViewController.m */,
+				905433B718E1B8DE00BE0139 /* ItemsTableViewController.xib */,
+				904BE8CF18F910FA00468981 /* FriendsTableViewController.m */,
+				90BFB51918E6B1EE00AC43B4 /* NewUserViewController.h */,
+				90BFB51A18E6B1EE00AC43B4 /* NewUserViewController.m */,
+				90BFB51B18E6B1EE00AC43B4 /* NewUserViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

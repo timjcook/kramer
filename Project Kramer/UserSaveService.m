@@ -33,11 +33,21 @@
   // one of either the success or failure blocks will fire
 
   [manager
-   POST: url
-   parameters: json
-   success:^(AFHTTPRequestOperation *operation, id responseObject){
-     NSLog(@"Submit response data: %@", responseObject);
-     [delegate logIn];
+    POST: url
+    parameters: json
+    success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      NSDictionary *userResponse = responseObject[@"user"];
+
+      User *user = [[User alloc] init];
+      NSLog(@"id = %@", userResponse[@"id"]);
+      NSLog(@"%@", userResponse[@"first_name"]);
+      user.id = [userResponse[@"id"] intValue];
+      user.firstName = userResponse[@"first_name"];
+      user.lastName = userResponse[@"last_name"];
+    
+      delegate.user = user;
+     
+      [delegate logIn];
    } // success callback block
    failure:^(AFHTTPRequestOperation *operation, NSError *error){
      NSLog(@"Error: %@", error);} // failure callback block

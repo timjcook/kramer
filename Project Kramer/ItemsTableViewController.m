@@ -35,6 +35,10 @@
   [api_service getItems:self];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  NSLog(@"qwe");
+}
+
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
   AddNewItemViewController *source = [segue sourceViewController];
   Item *item = source.item;
